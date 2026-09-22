@@ -8,14 +8,15 @@ For a Full-Stack / JS interview, they will test you in 4 layers. Don't just lear
 
 - *this* -> 4 rules: default, implicit, explicit (call/apply/bind), new. Arrow functions don't have their own `this`
 
-- *Event Loop* -> This is THE question. Call Stack -> Web APIs -> Microtask Queue (Promise, queueMicrotask) -> Macrotask Queue (setTimeout, setInterval). Microtasks always run first.
+- *Event Loop* -> This is THE question. 
+* Call Stack -> Web APIs -> Microtask Queue (Promise, queueMicrotask) -> Macrotask Queue (setTimeout, setInterval). Microtasks always run first.
   
   ```javascript
   console.log(1)
   setTimeout(()=> console.log(2), 0)
   Promise.resolve().then(()=> console.log(3))
   console.log(4)
-  // 1,4,3,2*- 
+  // 1,4,3,2*-
   ```
 
 - Prototypes & Inheritance* -> `*proto*` vs `prototype`, prototypal chain*- Equality* -> `==` vs `===`, coercion tricks `[] == ![]`*- var vs let vs const* -> scoping, re-declaration, hoisting
