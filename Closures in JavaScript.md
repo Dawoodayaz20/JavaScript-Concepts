@@ -31,3 +31,9 @@ counter() // 2 - it remembered
 > - Lexical Scoping = where variables ARE available (at write time).
 
 > - Closure = what happens when a function KEEPS those variables alive after.
+
+## Memory leaks in Closures:
+
+A closure is created when an inner function maintains a reference to its outer (lexical) scope, even after the outer function has finished executing. Closures can cause memory leaks because in some scenarios, an outer function creates a big data object. After that outer function stops running, that data should be deleted from memory but if it has an inner funct() using that data, it keeps a reference to that object alive and the garbage collector is unable to remove it from the memory. Also, at times, when closures are formed with funct() that are tied to an event listener, the closures are long-lived and causes memory leak.
+
+

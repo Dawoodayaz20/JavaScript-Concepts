@@ -14,7 +14,7 @@ function init() {
 init();
 ```
 
-Here, the console will log name defined in init function, which is the outer function. But the inner function has access to variables of the outer scope. 
+Here, the console will log name defined in `init()` function, which is the outer function. But the inner function has access to variables of the outer scope. 
 
 #### Scoping with `var`, `let` and `const`:
 
@@ -53,8 +53,6 @@ myFunc();
 ```
 
 Functions in JavaScript form closures. A _closure_ is the combination of a function and the lexical environment within which that function was declared. This environment consists of any variables that were in-scope at the time the closure was created. In this case, `myFunc` is a reference to the instance of the function `displayName` that is created when `makeFunc` is run.
-
-
 
 
 
